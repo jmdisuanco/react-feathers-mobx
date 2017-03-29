@@ -1,4 +1,4 @@
-React + Mobx + Feathers Boilerplate using Material-UI as UI Components to implement Google's MAterial Design
+React + Mobx + Feathers Boilerplate using Material-UI as UI Components to implement Google's Material Design
 
 =====================
 
