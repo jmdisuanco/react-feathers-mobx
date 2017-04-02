@@ -1,12 +1,22 @@
-// Not implemented yet
-
 import { observable } from 'mobx';
-
+import {authLocal} from './FeathersClient';
 class appState {
-  @observable messages=[]; // array container
+  @observable authenticated=false; // array container
+  @observable username='';
+  @observable password='';
 
-  newMessage(value){  //add entries to messages array
-    this.messages.push(value)
+
+  handleUsernameChange = (event) =>{
+    this.username = event.target.value;
+    console.log(this.username);
+  }
+
+  handlePasswordChange = (event) =>{
+    this.password = event.target.value;
+  }
+
+  handleLogin = () =>{
+    authLocal(this.username,this.password)
   }
 
 }

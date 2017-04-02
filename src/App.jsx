@@ -4,8 +4,12 @@ import DevTools from 'mobx-react-devtools';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import ChatComponent from './components/ChatComponent';
+import AppbarComponent from './components/AppbarComponent';
+import LoginComponent from './components/LoginComponent';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {List, ListItem} from 'material-ui/List';
+import Paper from 'material-ui/Paper';
+
 injectTapEventPlugin();
 
 
@@ -28,11 +32,6 @@ class App extends Component {
 
   render() {
     const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
   List: {
     width: 500,
     height: 450,
@@ -54,6 +53,9 @@ class App extends Component {
     return (
         <MuiThemeProvider>
           <div>
+            <LoginComponent/>
+            <AppbarComponent/>
+            <Paper zDepth={2} >
             <List
               cols={1}
               cellHeight={200}
@@ -63,7 +65,9 @@ class App extends Component {
                 <div style={ {float:"left", clear: "both"} } ref={(el) => { this.messagesEnd = el; }}></div>
             </List>
 
-          <ChatComponent/>
+            <ChatComponent/>
+          </Paper>
+
           </div>
         </MuiThemeProvider>
     );

@@ -13,6 +13,9 @@ export default class ChatComponent extends React.Component {
     this.style={
       marginRight: 20
     }
+    this.TextFieldStyle = {
+      width:'80%'
+    }
   }
 
   handleChange = (event) => {
@@ -41,6 +44,7 @@ export default class ChatComponent extends React.Component {
           value={this.state.value}
           onChange={this.handleChange}
           onKeyPress={this.handleKeyPress}
+          style ={this.TextFieldStyle}
         />
         <FloatingActionButton mini={true} style={this.style} onTouchTap={() => sendMessage(this.state.value)}><ContentSend/></FloatingActionButton>
       </div>

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/jmdisuanco/react-feathers-mobx"
   },
   "keywords": [
     "react",
@@ -41,9 +41,11 @@
   },
   "dependencies": {
     "feathers": "^2.1.1",
+    "feathers-authentication": "^0.7.12",
     "feathers-authentication-client": "^0.3.1",
     "feathers-hooks": "^1.8.1",
     "feathers-socketio": "^1.5.2",
+    "localstorage-memory": "^1.0.2",
     "material-ui": "^0.17.1",
     "mobx": "^3.0.0",
     "mobx-react": "^4.1.0",
